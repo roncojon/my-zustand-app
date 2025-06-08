@@ -1,12 +1,12 @@
 // src/components/TodoApp.tsx
 import React, { useEffect, useState, useMemo } from 'react'
 import { useTodoStore } from '../store/todoStore'
-import type { Todo } from '../store/todoStore'
+// import type { Todo } from '../store/todoStore'
 import './TodoApp.css'
 
 const TodoApp: React.FC = () => {
-  const todosRaw = useTodoStore((state) => state.todos)
-  const filter = useTodoStore((state) => state.filter)
+  const todosRaw:Todo[] = useTodoStore((state) => state.todos)
+  const filter:Filter = useTodoStore((state) => state.filter)
   const isLoading = useTodoStore((state) => state.isLoading)
   const error = useTodoStore((state) => state.error)
 
